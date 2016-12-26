@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <base href="/">
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+    
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAtpfsI2uBWtBU4FWFvABF_o7jehHygPWM",
+    authDomain: "fir-mobile-application.firebaseapp.com",
+    databaseURL: "https://fir-mobile-application.firebaseio.com",
+    storageBucket: "fir-mobile-application.appspot.com",
+    messagingSenderId: "957781761735"
+  };
+  firebase.initializeApp(config);
+</script>
+  </body>
+</html>
