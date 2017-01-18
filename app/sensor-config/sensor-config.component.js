@@ -26,14 +26,16 @@ var SensorConfigureComponent = (function () {
             _this.sensors = data;
         });
     };
-    SensorConfigureComponent.prototype.selectSensor = function (sensor, modal) {
-        this.sensorModel = {
-            name: sensor.name,
-            description: sensor.description,
-            type: sensor.type
-        };
-        modal.open();
-    };
+    /*
+        selectSensor(sensor:Sensor, modal:any){
+            this.sensorModel = {
+                name: sensor.name,
+                description: sensor.description,
+                type: sensor.type
+            };
+            modal.open();
+        }
+    */
     SensorConfigureComponent.prototype.addToDashboard = function (sensor) {
         console.log('adding sensor', sensor);
         this.sensorService.addToDashboard(sensor);

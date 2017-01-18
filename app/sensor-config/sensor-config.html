@@ -15,7 +15,7 @@
 
     <hr />
 
-    <sensor-list [sensors]="sensors | filterSensor: filterCmp.selectedCategory" showAdd="true" (addItem)="selectSensor($event, configModal)"></sensor-list>
+    <sensor-list [sensors]="sensors | filterSensor: filterCmp.selectedCategory" showAdd="true" (addItem)="addToDashboard($event)"></sensor-list>
 </div>
 
 <div class="app-page-content mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
@@ -34,18 +34,3 @@
 
 <!--<config-modal #configModal (confirm)="addToDashboard($event)"></config-modal>-->
 
-<modal #configModal (confirm)="addToDashboard(sensorModel)">
-    <span title>Configure sensor</span>
-    <div content class="mdl-card__supporting-text">
-        <form action="#" *ngIf="sensorModel">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" [ngClass]="{ 'is-dirty': sensorModel.name}">
-                <input class="mdl-textfield__input" type="text" id="name" [(ngModel)]="sensorModel.name"  name="name"/>
-                <label class="mdl-textfield__label" for="name">Name</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" [ngClass]="{ 'is-dirty': sensorModel.description}">
-                <textarea class="mdl-textfield__input" [(ngModel)]="sensorModel.description" name="description"></textarea>
-                <label class="mdl-textfield__label" for="userpass">Description</label>
-            </div>
-        </form>
-    </div>
-</modal>

@@ -29,8 +29,8 @@ export class SensorConfigureComponent implements OnInit{
                 this.sensors = data;
             });
     }
-
-    selectSensor(sensor:Sensor, modal:ModalComponent){
+/*
+    selectSensor(sensor:Sensor, modal:any){
         this.sensorModel = {
             name: sensor.name,
             description: sensor.description,
@@ -38,7 +38,7 @@ export class SensorConfigureComponent implements OnInit{
         };
         modal.open();
     }
-
+*/
     addToDashboard(sensor: Sensor){
         console.log('adding sensor', sensor);
         this.sensorService.addToDashboard(sensor);

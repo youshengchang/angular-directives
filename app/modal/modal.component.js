@@ -10,24 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var ModalComponent = (function () {
+    // @Output() confirm: EventEmitter<any> = new EventEmitter();
     function ModalComponent() {
         this.isOpen = false;
-        this.confirm = new core_1.EventEmitter();
     }
-    ModalComponent.prototype.open = function () {
+    ModalComponent.prototype.open = function (callback) {
+        this.nextFn = callback;
         this.isOpen = true;
     };
     ModalComponent.prototype.ok = function () {
+        this.nextFn();
         this.isOpen = false;
-        this.confirm.emit();
     };
     ModalComponent.prototype.cancel = function () {
         this.isOpen = false;
     };
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', core_1.EventEmitter)
-    ], ModalComponent.prototype, "confirm", void 0);
     ModalComponent = __decorate([
         core_1.Component({
             selector: 'modal',

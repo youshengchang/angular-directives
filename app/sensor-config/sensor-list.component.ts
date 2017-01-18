@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Sensor } from '../core/sensor';
+import { ModalComponent } from '../modal/modal.component';
+import { OpenWithDirective } from '../modal/open-modal.directive';
 
 @Component({
     selector: 'sensor-list',
