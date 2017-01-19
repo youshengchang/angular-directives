@@ -4,6 +4,38 @@ import { Component } from '@angular/core';
 selector: 'dashboard',
 template: `
         <div class="mdl-grid demo-content">
+       <widget>
+            <span widget-title>Test</span>
+            <div widget-body>
+                <tabs>
+                    <tab title="Starks">
+                        <ul>
+                            <li>Eddard</li>
+                            <li>Catelyn</li>
+                            <li>Robb</li>
+                            <li>Sansa</li>
+                            <li>Brandon</li>
+                            <li>Arya</li>
+                            <li>Rickon</li>
+                        </ul>
+                    </tab>
+                    <tab title="Lannisters">
+                        <ul>
+                            <li>Tywin</li>
+                            <li>Cersei</li>
+                            <li>Jamie</li>
+                            <li>Tyrion</li>
+                        </ul>
+                    </tab>
+                    <tab title="Targaryens">
+                        <ul>
+                            <li>Viserys</li>
+                            <li>Daenerys</li>
+                        </ul>
+                    </tab>
+                </tabs>
+            </div>
+        </widget>
             <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
               <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
                 <use xlink:href="#piechart" mask="url(#piemask)" />
@@ -125,7 +157,7 @@ template: `
               </g>
               <g id="Layer_4">
                 <polygon stroke-miterlimit="10" points="469.3,222.7 1,222.7 48.7,166.7 155.7,188.3 212,132.7
-                296.7,128 380.7,184.3 436.7,125 	"/>
+                296.7,128 380.7,184.3 436.7,125"/>
               </g>
             </g>
           </defs>

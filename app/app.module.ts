@@ -17,6 +17,9 @@ import { SensorFilterComponent } from './sensor-config/sensor-filter.component';
 import { FilterSensor } from './sensor-config/filter-sensor.pipe';
 import { ModalComponent } from './modal/modal.component';
 import { OpenWithDirective } from './modal/open-modal.directive';
+import { WidgetComponent } from './widget/widget.component';
+import { TabComponent } from './tabs/tab.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent},
@@ -41,8 +44,11 @@ const appRoutes: Routes = [
                   SensorFilterComponent,
                   FilterSensor,
                   ModalComponent,
-                  OpenWithDirective
-                  
+                  OpenWithDirective,
+                  WidgetComponent,
+                  TabComponent,
+                  TabsComponent
+         
                   ],
   bootstrap:    [ AppComponent ]
 })

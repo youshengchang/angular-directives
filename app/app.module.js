@@ -25,6 +25,9 @@ var sensor_filter_component_1 = require('./sensor-config/sensor-filter.component
 var filter_sensor_pipe_1 = require('./sensor-config/filter-sensor.pipe');
 var modal_component_1 = require('./modal/modal.component');
 var open_modal_directive_1 = require('./modal/open-modal.directive');
+var widget_component_1 = require('./widget/widget.component');
+var tab_component_1 = require('./tabs/tab.component');
+var tabs_component_1 = require('./tabs/tabs.component');
 var appRoutes = [
     { path: '', component: dashboard_component_1.DashboardComponent },
     { path: 'configure', component: sensor_config_component_1.SensorConfigureComponent }
@@ -50,7 +53,10 @@ var AppModule = (function () {
                 sensor_filter_component_1.SensorFilterComponent,
                 filter_sensor_pipe_1.FilterSensor,
                 modal_component_1.ModalComponent,
-                open_modal_directive_1.OpenWithDirective
+                open_modal_directive_1.OpenWithDirective,
+                widget_component_1.WidgetComponent,
+                tab_component_1.TabComponent,
+                tabs_component_1.TabsComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
